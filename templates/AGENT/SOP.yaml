@@ -1,0 +1,19 @@
+checklist:
+  - "Run scripts/validate.sh"
+  - "Ingest order: [STATE.yaml, ../../DECISIONS.md, BUILDPLAN.yaml]"
+  - "Produce delta: LOG/changes/DL-*.yaml (never direct edit STATE)"
+  - "Run rollup: scripts/aidt.py rollup --agent AGENT"
+rules:
+  - "Plan changes require a linked A3.decision.yaml"
+  - "Every change => one delta file + CHANGELOG entry"
+  - "If DECISIONS.md conflicts => HOLD and open handshake"
+
+hold_and_escalate:
+  conditions:
+    - "DECISIONS.md conflicts with BUILDPLAN.yaml/PRD.yaml"
+    - "Schema validation fails"
+  actions:
+    - "Stop change; open new-handshake with tag: conflict"
+    - "Request A3 decision within 24h"
+sla:
+  A3_review: "24h"

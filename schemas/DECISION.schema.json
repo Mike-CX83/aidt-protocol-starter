@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AIDT Review Decision",
+  "type": "object",
+  "required": [
+    "handshake_id",
+    "agent",
+    "timestamp",
+    "decision"
+  ],
+  "properties": {
+    "handshake_id": {
+      "type": "string"
+    },
+    "agent": {
+      "type": "string",
+      "const": "A3"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "decision": {
+      "type": "string",
+      "enum": [
+        "APPROVE",
+        "APPROVE_WITH_MODS",
+        "REJECT",
+        "PUNT",
+        "PENDING"
+      ]
+    },
+    "binding": {
+      "type": "array"
+    },
+    "rationale": {
+      "type": "string"
+    },
+    "followups": {
+      "type": "array"
+    }
+  }
+}

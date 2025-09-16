@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AIDT STATE Capsule",
+  "type": "object",
+  "required": [
+    "version",
+    "updated_at",
+    "phase",
+    "focus",
+    "canonical_refs",
+    "recent_deltas"
+  ],
+  "properties": {
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "phase": {
+      "type": "string"
+    },
+    "focus": {
+      "type": "object",
+      "required": [
+        "objective"
+      ],
+      "properties": {
+        "objective": {
+          "type": "string"
+        },
+        "scope_window": {
+          "type": "string"
+        }
+      }
+    },
+    "canonical_refs": {
+      "type": "object",
+      "required": [
+        "prd",
+        "buildplan",
+        "last_decision"
+      ],
+      "properties": {
+        "prd": {
+          "type": "string"
+        },
+        "buildplan": {
+          "type": "string"
+        },
+        "last_decision": {
+          "type": "string"
+        }
+      }
+    },
+    "ingest_order": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pin_set": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recent_deltas": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "open_questions": {
+      "type": "array"
+    },
+    "risks": {
+      "type": "array"
+    },
+    "next_actions": {
+      "type": "array"
+    }
+  }
+}

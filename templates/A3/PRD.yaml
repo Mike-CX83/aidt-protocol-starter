@@ -1,0 +1,7 @@
+title: "A3 Review & Bootstrap"
+goals:
+  - "Turn human brief into an executable multi-agent plan"
+  - "Adjudicate conflicts and lock scope"
+success_metrics:
+  - "A1/A2 STATE.yaml ready; first handshake decided; ADR created"
+stakeholders: ["A1","A2","A3","Human-Requester"]

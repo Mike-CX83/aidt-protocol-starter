@@ -1,0 +1,22 @@
+# A3 Bootstrap SOP (Agent-Only Mode)
+
+bootstrap_protocol:
+  ingest_order:
+    - "../../handoff/brief.md"
+    - "../../handoff/DECISIONS.md"
+  steps:
+    - "Create agents A1 and A2 if absent (use `IDENTITY.yaml` from templates)."
+    - "Draft PRD.yaml for A1 and A2 from the Brief."
+    - "Draft BUILDPLAN.yaml for A1 and A2 with phases and sync points."
+    - "Create a new handshake folder; write A1.report.yaml and A2.report.yaml."
+    - "Write A1.response.yaml and A2.response.yaml (mutual critique)."
+    - "Write A3.decision.yaml with decision, binding, rationale, followups."
+    - "Update both agents' STATE.yaml with next_actions and ingest_order/pin_set."
+    - "Append an entry to ../../DECISIONS.md and generate ADR."
+  constraints:
+    - "Never change plans without adding an A3.decision.yaml."
+  outputs:
+    - "Filled PRD/BUILDPLAN for A1/A2 (no placeholders)"
+    - "Handshake packet and decision"
+    - "Updated STATE for A1/A2"
+  finish_signal: "Write a summary to handoff/BOOTSTRAP_DONE.md"

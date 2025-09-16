@@ -1,0 +1,11 @@
+agent_id: AGENT
+role: "<owner_role>"
+llm_vendor: "<openai|anthropic|...>"
+llm_model: "<model_name>"
+capabilities: []
+guardrails:
+  must_follow_SOP: true
+  refuses_on: [format_violation, missing_decision]
+context_caps:
+  max_tokens_ingest: 12000
+  preferred_artifacts: [STATE.yaml, BUILDPLAN.yaml, ../../DECISIONS.md]

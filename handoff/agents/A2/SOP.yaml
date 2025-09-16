@@ -1,0 +1,9 @@
+checklist:
+  - "Run scripts/validate.sh"
+  - "Ingest order: [STATE.yaml, ../../DECISIONS.md, BUILDPLAN.yaml]"
+  - "Produce delta: LOG/changes/DL-*.yaml (never direct edit STATE)"
+  - "Run rollup: scripts/aidt.py rollup --agent A2"
+rules:
+  - "Plan changes require a linked A3.decision.yaml"
+  - "Every change => one delta file + CHANGELOG entry"
+  - "If DECISIONS.md conflicts => HOLD and open handshake"

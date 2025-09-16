@@ -1,0 +1,6 @@
+- **Agent**: A role-bound LLM process.
+- **Handoff**: Token-bounded state capsule files.
+- **Handshake**: Meeting packet between agents plus A3 decision.
+- **Delta**: Append-only change note in YAML.
+- **Decision Gate**: A3 approval requirement for plan/PRD modifications.
+- **STATE.yaml**: The first file to ingest next session.

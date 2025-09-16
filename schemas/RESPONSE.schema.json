@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AIDT Handshake Response",
+  "type": "object",
+  "required": [
+    "handshake_id",
+    "agent",
+    "timestamp"
+  ],
+  "properties": {
+    "handshake_id": {
+      "type": "string"
+    },
+    "agent": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
+    "agreement": {
+      "type": "array"
+    },
+    "challenges": {
+      "type": "array"
+    },
+    "requests": {
+      "type": "array"
+    },
+    "proposed_changes": {
+      "type": "array"
+    }
+  }
+}

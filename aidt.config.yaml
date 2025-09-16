@@ -1,0 +1,7 @@
+mode: simple        # simple | pro
+defaults:
+  agent3_autoboot_prompt: "prompts/agent3-autoboot.md"
+  pinset_file: "handoff/pinset.json"
+  brief_file: "handoff/brief.md"
+  state_budget_kb: 8
+  require_decision_for_plan_edits: true

@@ -1,0 +1,22 @@
+version: 1
+updated_at: 2025-09-16T01-59-40
+phase: "bootstrap"
+focus:
+  objective: "Convert brief into PRD/BUILDPLAN, spawn A1/A2, start HH-01"
+canonical_refs:
+  prd: "./PRD.yaml#v1"
+  buildplan: "./BUILDPLAN.yaml#v1"
+  last_decision: "../../DECISIONS.md"
+ingest_order:
+  - "../../handoff/brief.md"
+  - "../../handoff/DECISIONS.md"
+pin_set:
+  - "./SOP.yaml"
+  - "../../handoff/brief.md"
+recent_deltas: []
+open_questions: []
+risks: []
+next_actions:
+  - "Create A1/A2 if absent; populate their PRD/BUILDPLAN"
+  - "Open HH-01; write reports and responses; issue A3 decision"
+  - "Update A1/A2 STATE and write BOOTSTRAP_DONE.md"

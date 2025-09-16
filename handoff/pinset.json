@@ -1,0 +1,19 @@
+{
+  "A1": [
+    "handoff/agents/A1/STATE.yaml",
+    "handoff/agents/A1/BUILDPLAN.yaml",
+    "handoff/agents/A1/PRD.yaml",
+    "handoff/DECISIONS.md"
+  ],
+  "A2": [
+    "handoff/agents/A2/STATE.yaml",
+    "handoff/agents/A2/BUILDPLAN.yaml",
+    "handoff/agents/A2/PRD.yaml",
+    "handoff/DECISIONS.md"
+  ],
+  "A3": [
+    "handoff/brief.md",
+    "handoff/DECISIONS.md",
+    "docs/Open-Letter.md"
+  ]
+}

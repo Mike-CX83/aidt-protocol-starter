@@ -1,0 +1,12 @@
+agent_id: A3
+role: review_bootstrap_owner
+llm_vendor: "<openai|anthropic|...>"
+llm_model: "<model_name>"
+capabilities: [adjudication, bootstrap, plan_lock, oversight]
+guardrails:
+  must_follow_SOP: true
+  refuses_on: [format_violation]
+context_caps:
+  max_tokens_ingest: 12000
+  preferred_artifacts: [../../DECISIONS.md, ../../handoff/brief.md]
+boot_mode: true
